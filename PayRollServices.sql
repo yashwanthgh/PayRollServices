@@ -26,4 +26,6 @@ insert into Employee_Payroll values
        ('Alice Johnson', '2023-03-10'),
        ('Bob White', '2023-04-05');
 
+-- retrivng all the data from Employee_Payroll table
 
+select * from Employee_Payroll;
