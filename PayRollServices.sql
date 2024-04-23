@@ -14,16 +14,15 @@ select * from sys.databases;
 
 use Payroll_Service;
 
--- Creating table employee payroll
+-- Create table Employee_PayRoll
 
-create table Employee_Payroll (Id int primary key identity (1,1), Name nvarchar(20), Start date);
+create table Employee_PayRoll (Id int primary key identity (1, 1), Name nvarchar(20), Salary Decimal(10, 2), Start Date);
 
--- Insirting ito the Employee Payroll table
+-- Inserting data to the Employee PayRoll table
 
-insert into Employee_Payroll values 
-	   ('John Doe', '2023-01-15'),
-       ('Jane Smith', '2023-02-28'),
-       ('Alice Johnson', '2023-03-10'),
-       ('Bob White', '2023-04-05');
-
+insert into Employee_PayRoll (Name, Salary, Start)
+values ('Doe', 50000.00, '2023-01-15'),
+       ('Smith', 60000.00, '2023-02-28'),
+       ('Johnson', 55000.00, '2023-03-10'),
+       ('White', 65000.00, '2023-04-05');
 
