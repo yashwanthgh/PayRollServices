@@ -37,3 +37,11 @@ select Salary from Employee_PayRoll where Name = 'Smith';
 -- Retriving data between dates
 
 select * from Employee_PayRoll where Start between '2023-02-01' and '2023-04-01';
+
+-- Altering table 
+
+alter table Employee_PayRoll add Gender nvarchar(2);
+
+-- Updateing table 
+
+update Employee_PayRoll set Gender = 'M' where Name = 'Johnson';
