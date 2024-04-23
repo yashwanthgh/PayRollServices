@@ -30,3 +30,10 @@ values ('Doe', 50000.00, '2023-01-15'),
 
 select * from Employee_PayRoll;
 
+-- Retriving data from perticular emoloyee
+
+select Salary from Employee_PayRoll where Name = 'Smith';
+
+-- Retriving data between dates
+
+select * from Employee_PayRoll where Start between '2023-02-01' and '2023-04-01';
