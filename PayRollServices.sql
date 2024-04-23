@@ -45,3 +45,16 @@ alter table Employee_PayRoll add Gender nvarchar(2);
 -- Updateing table 
 
 update Employee_PayRoll set Gender = 'M' where Name = 'Johnson';
+
+-- Sum, Min, Max, Count and Avg Functions
+
+	-- Average
+select Gender, Avg(Salary) as AverageSalary from Employee_PayRoll group by Gender;
+	-- Maximum
+select Gender, Max(Salary) as MaximumSalary from Employee_PayRoll group by Gender;
+	-- Minimum
+select Gender, Min(Salary) as MinimumSalary from Employee_PayRoll group by Gender;
+	-- Sum
+select Gender, Sum(Salary) as TotalSalary from Employee_PayRoll group by Gender;
+	-- Count
+select Gender, Count(Salary) as MaleAndFemaleCount from Employee_PayRoll group by Gender;
