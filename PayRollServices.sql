@@ -14,3 +14,8 @@ select * from sys.databases;
 
 use Payroll_Service;
 
+-- Creating table employee payroll
+
+create table Employee_Payroll (Id int primary key identity (1,1), Name nvarchar(20), Start date);
+
+
