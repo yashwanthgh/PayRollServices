@@ -82,3 +82,7 @@ add BasicPay decimal(10, 2),
     TaxablePay decimal(10, 2),
     IncomeTax decimal(10, 2),
     NetPay decimal(10, 2);
+
+insert into employee_payroll
+(name, department, gender, BasicPay, Deductions, TaxablePay, IncomeTax, NetPay, start) VALUES
+('Terisa', 'Marketting', 'F', 3000000.00, 1000000.00, 2000000.00, 500000.00, 1500000.00, '2018-01-03' );
