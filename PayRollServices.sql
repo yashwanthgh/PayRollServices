@@ -58,3 +58,22 @@ select Gender, Min(Salary) as MinimumSalary from Employee_PayRoll group by Gende
 select Gender, Sum(Salary) as TotalSalary from Employee_PayRoll group by Gender;
 	-- Count
 select Gender, Count(Salary) as MaleAndFemaleCount from Employee_PayRoll group by Gender;
+
+-- Adding information like Address, Number and Department
+alter table Employee_PayRoll
+add Department nvarchar(50) default 'Unknown';
+
+-- Update existing data to set a default department
+update Employee_PayRoll
+set Department = 'Unknown'
+where Department is null;
+
+-- Alter the Department column to be non-nullable
+alter table Employee_PayRoll
+alter column Department nvarchar(50) not null;
+
+alter table Employee_PayRoll
+add Phone varchar(20),
+    Address nvarchar(100) default 'Unknown';
+
+select * from Employee_PayRoll
