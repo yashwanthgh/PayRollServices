@@ -76,4 +76,9 @@ alter table Employee_PayRoll
 add Phone varchar(20),
     Address nvarchar(100) default 'Unknown';
 
-select * from Employee_PayRoll
+alter table Employee_PayRoll
+add BasicPay decimal(10, 2),
+    Deductions decimal(10, 2),
+    TaxablePay decimal(10, 2),
+    IncomeTax decimal(10, 2),
+    NetPay decimal(10, 2);
